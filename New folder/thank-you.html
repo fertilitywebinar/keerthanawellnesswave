@@ -1,5 +1,24 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1966135397641523');
+fbq('track', 'PageView');
+fbq('track', 'Purchase', {value: 99, currency: 'INR'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1966135397641523&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>You're In! - Live Fertility Webinar</title>
 <style>
 :root{--g:#12a968;--gd:#087d4c;--dark:#16382c;--muted:#6f7c76}
@@ -18,6 +37,6 @@ p{color:var(--muted);font-size:14.5px;margin:0 0 6px}
   <h1>You're All Set!</h1>
   <p>Your seat for the <b>Live Fertility Webinar</b> is confirmed.</p>
   <p>Join our WhatsApp group to get the webinar link, reminders, and updates.</p>
-  <a class="wa-btn" href="https://chat.whatsapp.com/GPJKGChtIjVIKSJ9jn84ly" target="_blank">JOIN THE WHATSAPP GROUP →</a>
+  <a class="wa-btn" href="https://chat.whatsapp.com/GPJKGChtIjVIKSJ9jn84ly" target="_blank" onclick="if(window.fbq){fbq('track','Contact');}">JOIN THE WHATSAPP GROUP →</a>
 </div>
 </body></html>
