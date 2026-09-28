@@ -45,6 +45,11 @@ src="https://www.facebook.com/tr?id=1966135397641523&ev=PageView&noscript=1"
 .timer-offer .tlabel{color:var(--rd)}
 .timer-offer .tbox{background:var(--r);color:#fff}
 @media(max-width:650px){.timer{padding:9px 14px}.timer .tbox{font-size:16px;padding:4px 7px}}
+/* Webinar date & time highlight box */
+.webinar-info{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:16px auto 4px;background:#fff;border:2px dashed var(--g);border-radius:12px;padding:10px 16px}
+.webinar-info .wi-item{font-weight:900;font-size:15px;color:var(--dark)}
+.webinar-info .wi-item span{color:var(--gd)}
+@media(max-width:650px){.webinar-info{gap:6px 12px;padding:9px 12px}.webinar-info .wi-item{font-size:13px}}
 </style></head><body><div class="page">
 <section class="section center hero">
 <div class="badge">🎯 Stop Guessing. Start With A Plan.</div>
@@ -60,6 +65,10 @@ src="https://www.facebook.com/tr?id=1966135397641523&ev=PageView&noscript=1"
 <div class="tlabel">Offer<br>Ends In</div>
 <div class="tdigits"><div class="tbox tmin">15</div><div class="tcolon">:</div><div class="tbox tsec">00</div></div>
 </div>
+<div class="webinar-info">
+  <div class="wi-item">📅 <span class="js-webinar-date"></span></div>
+  <div class="wi-item">⏰ <span class="js-webinar-time"></span></div>
+</div>
 <a class="cta herocta js-cta" href="https://rzp.io/rzp/fertilityresetwebinar">RESERVE MY SEAT FOR ₹99 →</a>
 <p class="micro">One-time payment · Secure Razorpay checkout</p>
 </section>
@@ -74,6 +83,12 @@ src="https://www.facebook.com/tr?id=1966135397641523&ev=PageView&noscript=1"
 <section class="section offer"><div class="box"><div class="center"><h2>Reserve Your Seat For The Live Fertility Webinar — ₹99</h2><p>Reserve your seat for the Live Fertility Webinar and take the first step toward a more structured fertility-support approach.</p></div><ul><li>Designed for women dealing with <b>PCOS, low AMH and irregular periods</b></li><li>Learn practical fertility-supportive lifestyle strategies</li><li>Understand nutrition, stress management, yoga and healthy routines</li><li>Stop jumping between random fertility tips online</li><li>Start with a clear, structured blueprint</li></ul><div class="timer timer-offer timer-inline" role="timer" aria-label="Offer countdown">
 <div class="tlabel">Price Goes<br>Up In</div>
 <div class="tdigits"><div class="tbox tmin">15</div><div class="tcolon">:</div><div class="tbox tsec">00</div></div>
+</div>
+<div class="center">
+<div class="webinar-info">
+  <div class="wi-item">📅 <span class="js-webinar-date"></span></div>
+  <div class="wi-item">⏰ <span class="js-webinar-time"></span></div>
+</div>
 </div>
 <div class="price"><span class="old">₹999</span>₹99</div><div class="pay">One-time payment · Razorpay secure checkout</div><a class="cta js-cta" href="https://rzp.io/rzp/fertilityresetwebinar">RESERVE MY SEAT FOR ₹99 →</a></div></section>
 <section class="section"><div class="story"><h2>Struggling With Irregular Periods And Poor Egg Growth?</h2><p>Feeling frustrated with negative pregnancy tests month after month? You're not alone.</p><p>Many women spend months trying different diets, supplements, exercises and fertility tips without knowing what to focus on first.</p><div class="quote">The goal is not another random fertility tip. The goal is a clear, practical blueprint you can understand and follow.</div></div></section>
@@ -110,7 +125,7 @@ src="https://www.facebook.com/tr?id=1966135397641523&ev=PageView&noscript=1"
 </div>
 </section>
 <section class="final"><h2>Ready To Reserve Your Seat?</h2><p>Join the Live Fertility Webinar for just <b>₹99</b> and learn a clear, structured approach to your fertility journey.</p><a class="finalcta js-cta" href="https://rzp.io/rzp/fertilityresetwebinar">RESERVE MY SEAT FOR ₹99 →</a><p class="disclaimer">Individual fertility outcomes vary. This blueprint is educational/lifestyle support and does not replace diagnosis, fertility treatment or advice from a qualified healthcare professional.</p></section><footer class="footer">Live Fertility Webinar · +91 6369606516<br>PCOS · Low AMH · Irregular Periods · 5000+ Women Guided</footer></div>
-<div class="sticky"><div class="stickyin"><div><strong>Only @ <span style="text-decoration:line-through">₹999</span> <span class="stickyprice">₹99/-</span></strong><small>Reserve Your Live Webinar Seat Today</small></div><a class="reserve js-cta" href="https://rzp.io/rzp/fertilityresetwebinar">RESERVE MY SEAT</a></div></div>
+<div class="sticky"><div class="stickyin"><div><strong>Only @ <span style="text-decoration:line-through">₹999</span> <span class="stickyprice">₹99/-</span></strong><small>Live Webinar: <span class="js-webinar-date"></span> · <span class="js-webinar-time"></span></small></div><a class="reserve js-cta" href="https://rzp.io/rzp/fertilityresetwebinar">RESERVE MY SEAT</a></div></div>
 <div class="modal-overlay" id="payModalOverlay">
 <div class="modal">
 <button class="modal-close" id="payModalClose" aria-label="Close">✕</button>
@@ -130,6 +145,16 @@ src="https://www.facebook.com/tr?id=1966135397641523&ev=PageView&noscript=1"
 </div>
 <script>
 (function(){
+  // ============================================================
+  // 🔴 CHANGE EVERY WEEK: update ONLY these two lines 🔴
+  // ============================================================
+  var WEBINAR_DATE = "Sunday, 4 October 2026";
+  var WEBINAR_TIME = "10:00 AM IST";
+  // ============================================================
+
+  document.querySelectorAll('.js-webinar-date').forEach(function(el){ el.textContent = WEBINAR_DATE; });
+  document.querySelectorAll('.js-webinar-time').forEach(function(el){ el.textContent = WEBINAR_TIME; });
+
   var RAZORPAY_LINK = "https://rzp.io/rzp/fertilityresetwebinar"; // Replace with your actual Razorpay Payment Page link
   var overlay = document.getElementById('payModalOverlay');
   var form = document.getElementById('payForm');
